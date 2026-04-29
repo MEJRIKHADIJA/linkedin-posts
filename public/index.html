@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkedIn Hooks Studio</title>
+    <meta
+      name="description"
+      content="Turn a boring statement into five high-engagement LinkedIn hooks."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Copy Lab</p>
+        <h1>Turn a flat sentence into five LinkedIn hooks people actually stop for.</h1>
+        <p class="lede">
+          Paste the boring version. The app rewrites it with curiosity, tension, and a little
+          strategic vulnerability.
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="panel input-panel">
+          <div class="panel-header">
+            <h2>Source Statement</h2>
+            <p>Start with the bland version someone would normally ignore.</p>
+          </div>
+
+          <div class="sample-row" aria-label="Sample statements">
+            <button class="sample-pill" type="button" data-sample>
+              Our platform helps recruiters save time screening candidates.
+            </button>
+            <button class="sample-pill" type="button" data-sample>
+              We launched a new dashboard for marketing teams.
+            </button>
+            <button class="sample-pill" type="button" data-sample>
+              I learned that consistency matters more than motivation.
+            </button>
+          </div>
+
+          <form id="hook-form" class="hook-form">
+            <label class="field-label" for="statement">Boring statement</label>
+            <textarea
+              id="statement"
+              name="statement"
+              rows="8"
+              placeholder="Example: Our new analytics dashboard helps creators understand which posts drive qualified leads."
+              required
+            ></textarea>
+
+            <div class="form-footer">
+              <p class="hint">Press Ctrl+Enter to generate</p>
+              <button id="generate-button" class="primary-button" type="submit">
+                Generate 5 hooks
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-header output-header">
+            <div>
+              <h2>Hook Output</h2>
+              <p>Each version keeps the same idea, but makes it much harder to scroll past.</p>
+            </div>
+            <button id="copy-all-button" class="ghost-button" type="button" hidden>
+              Copy all
+            </button>
+          </div>
+
+          <p id="status" class="status" aria-live="polite">Ready when you are.</p>
+
+          <ol id="results" class="results" hidden></ol>
+
+          <div id="empty-state" class="empty-state">
+            <p class="empty-kicker">What you’ll get</p>
+            <h3>Five variations with different strategic angles</h3>
+            <p>
+              The app returns tight hooks and labels the persuasion move behind each one, so it’s
+              easier to spot what style fits your voice.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
